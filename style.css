@@ -364,7 +364,6 @@ a {
   height: 76px;
 }
 
-/* Logo */
 .logo {
   display: flex;
   align-items: center;
@@ -413,7 +412,6 @@ a {
   margin-top: 4px;
 }
 
-/* Nav Menu */
 .nav-menu {
   display: flex;
   align-items: center;
@@ -558,7 +556,7 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.75);
   padding: 10px 14px;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-card);
@@ -996,7 +994,6 @@ a {
   line-height: 1.55;
 }
 
-/* Core Values 6 Grid */
 .core-values-section {
   padding-top: 20px;
 }
@@ -1062,18 +1059,55 @@ a {
   line-height: 1.5;
 }
 
-/* 9. PROGRAM PEMBELAJARAN 8 GRID (03) */
-.programs-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
+/* ==========================================================================
+   9. PROGRAM KURSUS & DETAIL HARGA (03)
+   ========================================================================== */
+.programs-pricing-section {
+  background-color: var(--bg-surface);
 }
 
-.program-card {
+.program-category-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 45px;
+}
+
+.prog-filter-btn {
+  background-color: var(--bg-white);
+  border: 1.5px solid var(--border-card);
+  color: var(--text-muted);
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.prog-filter-btn:hover,
+.prog-filter-btn.active {
+  background-color: var(--primary);
+  color: #FFFFFF;
+  border-color: var(--primary);
+  box-shadow: 0 4px 14px rgba(0, 86, 255, 0.28);
+}
+
+.course-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+  margin-bottom: 35px;
+}
+
+.course-card {
   background-color: var(--bg-white);
   border-radius: var(--radius-xl);
   border: 1px solid var(--border-card);
-  padding: 30px 24px;
+  padding: 35px 28px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1081,114 +1115,260 @@ a {
   transition: all var(--transition-normal);
 }
 
-.program-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--primary-border);
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
 }
 
-.popular-prog {
-  border: 2px solid var(--accent-orange);
-  box-shadow: 0 10px 25px rgba(255, 107, 0, 0.15);
+.course-card.featured-popular {
+  border: 2.5px solid var(--accent-orange);
+  box-shadow: 0 16px 36px rgba(255, 107, 0, 0.16);
 }
 
-.pop-flag {
+.popular-ribbon {
   position: absolute;
-  top: -12px;
-  right: 20px;
+  top: -14px;
+  left: 28px;
   background: linear-gradient(135deg, var(--accent-orange) 0%, var(--accent-amber) 100%);
   color: #FFFFFF;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 4px 16px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 10px rgba(255, 107, 0, 0.35);
+  letter-spacing: 0.05em;
+}
+
+.course-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 14px;
+}
+
+.course-category-tag {
+  display: inline-block;
   font-size: 0.75rem;
   font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   padding: 3px 12px;
   border-radius: var(--radius-pill);
+  margin-bottom: 6px;
 }
 
-.prog-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 16px;
+.tag-blue { background-color: var(--primary-light); color: var(--primary); }
+.tag-orange { background-color: var(--accent-orange-light); color: var(--accent-orange); }
+.tag-emerald { background-color: var(--accent-green-light); color: #15803D; }
+.tag-amber { background-color: var(--accent-amber-light); color: #B45309; }
+
+.course-header h3 {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  line-height: 1.25;
 }
 
-.prog-icon {
-  width: 50px;
-  height: 50px;
+.course-target-age {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--accent-orange);
+  margin-top: 3px;
+}
+
+.course-icon-box {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.45rem;
+  font-size: 1.6rem;
 }
 
-.prog-badge {
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 3px 10px;
-  border-radius: var(--radius-pill);
+.course-tagline-quote {
+  font-size: 0.86rem;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--primary);
+  background-color: var(--primary-light);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px;
 }
 
-.badge-blue { background-color: var(--primary-light); color: var(--primary); }
-.badge-orange { background-color: var(--accent-orange-light); color: var(--accent-orange); }
-.badge-emerald { background-color: var(--accent-green-light); color: #15803D; }
-.badge-amber { background-color: var(--accent-amber-light); color: #B45309; }
-
-.program-card h3 {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--text-heading);
-  margin-bottom: 8px;
-}
-
-.prog-desc {
-  font-size: 0.88rem;
+.course-main-desc {
+  font-size: 0.92rem;
   color: var(--text-muted);
   line-height: 1.55;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
-.prog-details {
+/* Pricing Banner Inside Card */
+.course-price-banner {
+  background: linear-gradient(135deg, var(--bg-surface) 0%, #EFF6FF 100%);
+  border: 1.5px dashed var(--primary-border);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.price-amount-group {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.price-amount-group .curr {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+.price-amount-group .val {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  letter-spacing: -0.02em;
+}
+
+.price-amount-group .freq {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.price-meta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.p-sessions {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.p-duration {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-light);
+  background-color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-light);
+  margin-top: 3px;
+}
+
+/* 3 Level Kelas */
+.course-levels-box {
   background-color: var(--bg-surface);
   border-radius: var(--radius-md);
-  padding: 14px;
+  padding: 18px;
   margin-bottom: 20px;
-  flex: 1;
+  border: 1px solid var(--border-card);
 }
 
-.prog-details strong {
-  display: block;
-  font-size: 0.76rem;
+.levels-title {
+  font-size: 0.82rem;
+  font-weight: 800;
   text-transform: uppercase;
   color: var(--text-heading);
   letter-spacing: 0.05em;
-  margin-bottom: 3px;
+  margin-bottom: 12px;
 }
 
-.prog-tags {
-  font-size: 0.82rem;
-  color: var(--primary);
-  font-weight: 600;
-  margin-bottom: 10px;
+.level-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
-.prog-concepts {
+.level-item:last-child {
+  margin-bottom: 0;
+}
+
+.level-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  margin-top: 1px;
+}
+
+.badge-lvl-1 { background-color: #E2E8F0; color: #334155; }
+.badge-lvl-2 { background-color: var(--primary-light); color: var(--primary); }
+.badge-lvl-3 { background-color: var(--accent-orange-light); color: var(--accent-orange); }
+
+.level-item strong {
+  font-size: 0.86rem;
+  color: var(--text-heading);
+  display: block;
+}
+
+.level-item p {
   font-size: 0.82rem;
   color: var(--text-muted);
   line-height: 1.45;
 }
 
-.prog-cta-link {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: var(--primary);
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
+/* Manfaat Kelas */
+.course-benefits-wrap {
+  margin-bottom: 25px;
 }
 
-.prog-cta-link:hover {
-  color: var(--accent-orange);
+.course-benefits-wrap h4 {
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--text-heading);
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+
+.benefit-pills {
+  display: flex;
+  flex-wrap: wrap;
   gap: 8px;
+}
+
+.b-pill {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-card);
+  color: var(--text-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+/* Card CTA Action */
+.course-card-actions {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pricing-guarantee-strip {
+  background-color: var(--accent-green-light);
+  border: 1px solid var(--accent-green-border);
+  color: #14532D;
+  padding: 16px 24px;
+  border-radius: var(--radius-lg);
+  font-size: 0.95rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 /* 10. PENDEKATAN PEMBELAJARAN 5 WORKFLOW (04) */
@@ -1276,7 +1456,6 @@ a {
   font-weight: bold;
 }
 
-/* Metode Pendukung 6 Grid */
 .supporting-methods-container {
   padding-top: 10px;
 }
@@ -1443,7 +1622,6 @@ a {
   line-height: 1.5;
 }
 
-/* Outcomes Column */
 .outcomes-showcase-box {
   background: linear-gradient(135deg, #0B1120 0%, #172554 100%);
   color: #FFFFFF;
@@ -1546,7 +1724,6 @@ a {
   line-height: 1.55;
 }
 
-/* Alur Layanan Kemitraan */
 .partnership-workflow-box {
   background-color: var(--bg-white);
   border: 1.5px solid var(--border-card);
@@ -1725,7 +1902,6 @@ a {
   color: #FFFFFF;
 }
 
-/* Panel Form Kanan */
 .trial-form-panel {
   padding: 50px 45px;
   background-color: #FFFFFF;
@@ -2123,6 +2299,10 @@ a {
   .w-step-arrow {
     transform: rotate(90deg);
   }
+
+  .course-pricing-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }
 
 @media (max-width: 768px) {
@@ -2199,10 +2379,22 @@ a {
     flex-direction: column;
     text-align: center;
   }
+
+  .course-pricing-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
   .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .course-card {
+    padding: 25px 20px;
+  }
+
+  .price-amount-group .val {
     font-size: 1.8rem;
   }
 

@@ -2,9 +2,59 @@
  * ==========================================================================
  * CODING FIRST PURWOKERTO - OFFICIAL JAVASCRIPT
  * "Your Future Education" | "Learning Today, Creating Tomorrow"
- * Integrasi WhatsApp, Email, Navigasi Mobile, & ScrollSpy
+ * Integrasi WhatsApp, Email, Navigasi Mobile, Filter Program & ScrollSpy
  * ==========================================================================
  */
+
+/**
+ * Global helper: Dipanggil oleh tombol "Coba Free Trial Kelas Ini" pada setiap kartu program
+ * Mengisi dropdown pilihan kursus secara otomatis dan scroll halus ke formulir pendaftaran
+ */
+window.selectTrialProgram = function (programIdentifier) {
+  const selectElem = document.getElementById('programInterest');
+  const trialSection = document.getElementById('trial');
+
+  if (selectElem && programIdentifier) {
+    const cleanId = String(programIdentifier).toLowerCase();
+
+    // Cek kecocokan keyword utama: coding, robotik, calistung, english, microsoft, jurnalistik
+    const keywords = ['coding', 'robotik', 'calistung', 'english', 'microsoft', 'jurnalistik'];
+    let targetKeyword = '';
+    for (let i = 0; i < keywords.length; i++) {
+      if (cleanId.includes(keywords[i])) {
+        targetKeyword = keywords[i];
+        break;
+      }
+    }
+
+    for (let i = 0; i < selectElem.options.length; i++) {
+      const optVal = selectElem.options[i].value.toLowerCase();
+      if ((targetKeyword && optVal.includes(targetKeyword)) || optVal.includes(cleanId)) {
+        selectElem.selectedIndex = i;
+        break;
+      }
+    }
+
+    // Feedback visual transisi warna oranye energi
+    selectElem.style.transition = 'all 0.3s ease';
+    selectElem.style.borderColor = '#FF6B00';
+    selectElem.style.boxShadow = '0 0 0 4px rgba(255, 107, 0, 0.28)';
+    setTimeout(function () {
+      selectElem.style.borderColor = '';
+      selectElem.style.boxShadow = '';
+    }, 2400);
+  }
+
+  if (trialSection) {
+    trialSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const studentNameInput = document.getElementById('studentName');
+    if (studentNameInput) {
+      setTimeout(function () {
+        studentNameInput.focus();
+      }, 500);
+    }
+  }
+};
 
 document.addEventListener('DOMContentLoaded', function () {
   'use strict';
@@ -80,7 +130,35 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', highlightNavOnScroll);
 
   /* --------------------------------------------------------------------------
-   * 4. Form Pendaftaran Free Trial Online (WhatsApp & Email Integrasi)
+   * 4. Filter Kategori Program Kursus (Semua, Teknologi, Bahasa, Calistung)
+   * ----------------------------------------------------------------------- */
+  const progFilterBtns = document.querySelectorAll('.prog-filter-btn');
+  const courseCards = document.querySelectorAll('.course-card');
+
+  if (progFilterBtns.length > 0 && courseCards.length > 0) {
+    progFilterBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const category = btn.getAttribute('data-category');
+
+        progFilterBtns.forEach(function (b) {
+          b.classList.remove('active');
+        });
+        btn.classList.add('active');
+
+        courseCards.forEach(function (card) {
+          const cardCategory = card.getAttribute('data-category');
+          if (category === 'all' || cardCategory === category) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  /* --------------------------------------------------------------------------
+   * 5. Form Pendaftaran Free Trial Online (WhatsApp & Email Integrasi)
    * ----------------------------------------------------------------------- */
   const freeTrialForm = document.getElementById('freeTrialForm');
   const trialAlertSuccess = document.getElementById('trialAlertSuccess');
@@ -200,7 +278,7 @@ ${data.parentName}`
   }
 
   /* --------------------------------------------------------------------------
-   * 5. Form Kontak Cepat (General Contact Form)
+   * 6. Form Kontak Cepat (General Contact Form)
    * ----------------------------------------------------------------------- */
   const generalContactForm = document.getElementById('generalContactForm');
   const generalContactSuccess = document.getElementById('generalContactSuccess');

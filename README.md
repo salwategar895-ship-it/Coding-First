@@ -4,18 +4,35 @@ Website resmi dan portal pendaftaran akademi edukasi teknologi **Coding First**,
 
 ---
 
+## 🎨 Palet Warna Resmi: The Dynamic Tech Palette
+
+Desain website Coding First mengimplementasikan **The Dynamic Tech Palette**, kombinasi warna cerah berenergi yang memicu rasa ingin tahu anak-anak (usia 6–12) sekaligus memberi kesan modern, rapi, dan tepercaya bagi remaja (13–18) serta orang tua mereka:
+
+| Komponen Warna | Kode Hex | Nilai Filosofis | Penerapan Utama di UI |
+| :--- | :--- | :--- | :--- |
+| **Primary Blue (Biru Elektrik / Modern)** | `#0056FF` & `#1B63FF` | Teknologi, kecerdasan, logika, fokus, dan profesionalisme. | Header navbar, tombol navigasi aktif, brand logo mark, fokus formulir, border kurikulum favorit. |
+| **Vibrant Accent / Energy (Oranye Ceria & Amber)** | `#FF6B00` & `#F59E0B` | Stimulasi kreativitas, keceriaan, antusiasme, dan gamifikasi (XP). | Tombol utama *"Ikuti Free Trial"*, ribbon *"Paling Direkomendasikan"*, badge level usia 6–8, pilar gamifikasi. |
+| **Success & WhatsApp Green (Emerald & Hijau)** | `#10B981` & `#25D366` | Pertumbuhan, keamanan, keterbukaan, dan saluran komunikasi langsung. | Tombol WhatsApp admin, floating widget WA, indikator live, checklist fitur, garansi 100%. |
+| **Background & Surface (Putih & Off-White)** | `#FFFFFF`, `#F8FAFC`, `#F3F4F6` | Bersih, sejuk di mata, kontras optimal untuk membaca tanpa melelahkan anak. | Latar belakang section bergantian, card penampung modul belajar, container form. |
+| **Text & Heading (Charcoal / Abu-abu Gelap)** | `#111827` & `#1F2937` | Kontras tinggi, kejelasan membaca maksimal bagi anak dan orang tua. | Heading judul H1-H4, sub-judul, paragraf penjelasan, dan label input. |
+
+---
+
 ## 🚀 Fitur Utama & Key Deliverables
 
 1. **Website Live & Responsive:** 
-   - Dirancang dengan layout mobile-friendly (optimal di smartphone, tablet, laptop, dan desktop monitor lebar).
-   - Zero-dependency framework (Vanilla HTML5, CSS3 kustom & JavaScript modern), memuat dalam sekejap tanpa bundler yang rumit.
+   - Optimal di smartphone, tablet, laptop, dan monitor desktop lebar.
+   - Zero-dependency framework (Vanilla HTML5, CSS3 kustom & JavaScript modern), memuat secepat kilat tanpa perlu build step atau npm instalasi.
 2. **Profil Perusahaan & Visi-Misi:**
-   - Latar belakang Coding First dalam membentuk nalar komputasional (*computational thinking*).
+   - Latar belakang Coding First dalam membentuk *computational thinking*.
    - Kartu inspiratif Visi & Misi 4 pilar serta Core Values (*Creative Exploration, Logical Reasoning, Hands-on Engineering, Future-Ready*).
 3. **Kurikulum Berjenjang & Paket Biaya Transparan:**
-   - Pembagian level belajar: *Little Coder (6-8 tahun)*, *Junior Dev (9-13 tahun)*, *Robotics & IoT Inventor (10-18 tahun)*.
+   - Pembagian level belajar:
+     * **Little Coder (Usia 6–8 Tahun):** Block coding visual Scratch Jr, game animasi sederhana.
+     * **Junior Dev (Usia 9–13 Tahun):** Python, Roblox Lua, web building HTML/CSS/JS.
+     * **Robotics & IoT Inventor (Usia 10–18 Tahun):** Arduino, ESP32, sensor pintar, smart home automation.
    - 4-Tahap Roadmap Belajar (*Foundation &rarr; Application &rarr; Creation &rarr; Exhibition*).
-   - *Pricing cards* komparatif: **Paket Starter**, **Paket Innovator Pro (Terpopuler)**, dan **Paket Private 1-on-1** lengkap dengan garansi kepuasan.
+   - *Pricing cards* komparatif: **Paket Starter**, **Paket Innovator Pro (Paling Direkomendasikan)**, dan **Paket Private 1-on-1** lengkap dengan garansi kepuasan 100%.
 4. **Galeri & Dokumentasi Kegiatan Modular:**
    - Portofolio foto kegiatan anak saat merakit robot, coding Scratch, IoT smart home, dan workshop.
    - Filter tab kategori interaktif: *Semua Foto*, *Coding & Game*, *Robotika*, dan *IoT & Workshop*.
@@ -30,23 +47,12 @@ Website resmi dan portal pendaftaran akademi edukasi teknologi **Coding First**,
 
 ---
 
-## 🎨 Panduan Warna & Design System (Sesuai Ketentuan)
-
-| Elemen / Kategori | Nilai Hex | Penggunaan di Website |
-| :--- | :--- | :--- |
-| **Primary & Action Blue** | `#0056FF` / `#0044CC` | Tombol CTA utama, badge aktif, aksen logo, fokus formulir, border paket populer |
-| **Secondary / WhatsApp Green** | `#25D366` / `#10B981` | Tombol WhatsApp direct, tombol submit pendaftaran, ikon badge sukses, pulse live |
-| **Background & Surface** | `#FFFFFF` / `#F8FAFC` / `#F3F4F6` | Latar belakang section bergantian, card container, backdrop form |
-| **Text & Heading** | `#111827` / `#1F2937` | Heading, judul kurikulum, paragraf isi, dan label formulir berkontras tinggi |
-
----
-
 ## 📁 Struktur Berkas
 
 ```
 Coding-First/
 ├── index.html        # Struktur semantik HTML5, meta tags SEO, dan seluruh section
-├── style.css         # Styling kustom terstruktur, CSS variables, animasi, responsif mobile
+├── style.css         # Styling The Dynamic Tech Palette, CSS variables, animasi, responsif mobile
 ├── script.js         # Navigasi mobile, filter galeri, modal lightbox, WhatsApp form builder
 └── README.md         # Dokumentasi resmi dan petunjuk pembaruan
 ```
@@ -83,13 +89,14 @@ Struktur galeri dibuat **sangat modular**. Untuk menambahkan foto baru:
        </div>
      </div>
      <div class="gallery-info">
-       <span class="gallery-tag">Robotika</span>
+       <span class="gallery-tag tag-badge-orange">Robotika</span>
        <h4>Judul Kegiatan</h4>
        <p>Deskripsi singkat kegiatan anak-anak.</p>
      </div>
    </article>
    ```
 3. Kategori yang didukung secara otomatis oleh filter: `coding`, `robotics`, atau `iot`.
+4. Kelas badge tag yang tersedia: `tag-badge-blue`, `tag-badge-orange`, atau `tag-badge-emerald`.
 
 ---
 
@@ -98,10 +105,7 @@ Struktur galeri dibuat **sangat modular**. Untuk menambahkan foto baru:
 1. Cukup klik ganda berkas `index.html` untuk membukanya langsung di peramban favorit Anda (Google Chrome, Microsoft Edge, Mozilla Firefox, atau Safari).
 2. Atau jalankan *live server* sederhana melalui terminal:
    ```bash
-   # Menggunakan Python
-   python -m http.server 8000
-   
-   # Atau menggunakan npx serve
+   # Menggunakan npx serve
    npx serve .
    ```
-   Lalu buka `http://localhost:8000` di browser.
+   Lalu buka `http://localhost:3000` di peramban Anda.

@@ -1,11 +1,13 @@
 /* ==========================================================================
    CODING FIRST - WEBSITE RESMI
-   Styling Sheet Utama (Design System & Responsif)
-   Palet Warna Resmi:
-   - Primary Blue: #0056FF / #1B63FF
-   - WhatsApp / Accent Green: #25D366 / #10B981
-   - Backgrounds: #FFFFFF / #F8FAFC / #F3F4F6
-   - Heading & Text: #111827 / #1F2937 / #4B5563
+   Styling Sheet Utama - THE DYNAMIC TECH PALETTE (Anak & Remaja Usia 6-18)
+   
+   Skema Palet Warna:
+   1. Primary Blue (Biru Elektrik / Modern Blue): #0056FF & #1B63FF
+   2. Vibrant Accent / Energy (Oranye Ceria & Kuning Amber): #FF6B00 & #F59E0B
+   3. Success & WhatsApp Green (Hijau Toska / Emerald): #10B981 & #25D366
+   4. Background & Surface (Putih Bersih & Off-White): #FFFFFF, #F8FAFC & #F3F4F6
+   5. Text & Heading (Charcoal / Abu-abu Gelap): #111827 & #1F2937
    ========================================================================== */
 
 /* 1. RESET DASAR & VARIABEL GLOBAL */
@@ -16,22 +18,41 @@
 }
 
 :root {
-  /* Skema Warna Resmi Coding First */
+  /* 1. Primary Blue (Teknologi, Logika, Kecerdasan & Fokus) */
   --primary: #0056FF;
   --primary-hover: #0044CC;
+  --primary-blue-alt: #1B63FF;
   --primary-light: #EBF2FF;
   --primary-border: #D0E1FD;
 
+  /* 2. Vibrant Accent / Energy (Kreativitas, Keceriaan, Antusiasme Gamifikasi) */
+  --accent-orange: #FF6B00;
+  --accent-orange-hover: #E55F00;
+  --accent-orange-light: #FFF0E6;
+  --accent-orange-border: #FFD4BA;
+
+  --accent-amber: #F59E0B;
+  --accent-amber-hover: #D97706;
+  --accent-amber-light: #FEF3C7;
+  --accent-amber-border: #FDE68A;
+
+  /* 3. Success & WhatsApp Green (Pertumbuhan, Keamanan & Komunikasi Orang Tua) */
   --accent-green: #25D366;
   --accent-green-hover: #1EB855;
   --accent-green-light: #DCFCE7;
-  --emerald: #10B981;
+  --accent-green-border: #86EFAC;
 
+  --emerald: #10B981;
+  --emerald-hover: #059669;
+  --emerald-light: #D1FAE5;
+
+  /* 4. Text & Heading (Kontras Tinggi & Nyaman Dibaca Anak & Orang Tua) */
   --text-heading: #111827;
   --text-body: #1F2937;
   --text-muted: #4B5563;
   --text-light: #6B7280;
 
+  /* 5. Background & Surface */
   --bg-white: #FFFFFF;
   --bg-surface: #F8FAFC;
   --bg-subtle: #F3F4F6;
@@ -50,6 +71,7 @@
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
   --shadow-lg: 0 10px 25px -3px rgba(0, 0, 0, 0.08), 0 4px 8px -4px rgba(0, 0, 0, 0.04);
   --shadow-xl: 0 20px 30px -8px rgba(0, 86, 255, 0.12), 0 8px 12px -4px rgba(0, 0, 0, 0.04);
+  --shadow-orange: 0 8px 20px rgba(255, 107, 0, 0.28);
   --shadow-wa: 0 8px 24px rgba(37, 211, 102, 0.35);
 
   /* Radius */
@@ -114,7 +136,7 @@ a {
 }
 
 .section-header {
-  max-width: 760px;
+  max-width: 780px;
   margin: 0 auto 50px;
 }
 
@@ -131,8 +153,20 @@ a {
   margin-bottom: 12px;
 }
 
+/* Tag Berenergi Oranye */
+.section-tag.tag-orange {
+  background-color: var(--accent-orange-light);
+  color: var(--accent-orange);
+}
+
+/* Tag Berenergi Emerald */
+.section-tag.tag-emerald {
+  background-color: var(--accent-green-light);
+  color: #15803D;
+}
+
 .section-heading {
-  font-size: 2.25rem;
+  font-size: 2.3rem;
   font-weight: 800;
   color: var(--text-heading);
   line-height: 1.25;
@@ -180,7 +214,7 @@ a {
   width: 100%;
 }
 
-/* Tombol Biru Utama */
+/* Tombol Biru Utama (Primary Blue #0056FF) */
 .btn-primary {
   background-color: var(--primary);
   color: #FFFFFF;
@@ -191,6 +225,19 @@ a {
   background-color: var(--primary-hover);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 86, 255, 0.38);
+}
+
+/* Tombol Energi Oranye Ceria (#FF6B00) */
+.btn-energy {
+  background: linear-gradient(135deg, var(--accent-orange) 0%, #E65A00 100%);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-orange);
+}
+
+.btn-energy:hover {
+  background: linear-gradient(135deg, #FF7B1A 0%, var(--accent-orange) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(255, 107, 0, 0.38);
 }
 
 /* Tombol Sekunder / Abu-abu Elegan */
@@ -221,7 +268,7 @@ a {
   background-color: var(--primary-light);
 }
 
-/* Tombol WhatsApp */
+/* Tombol WhatsApp (Success Green #25D366) */
 .btn-wa {
   background-color: var(--accent-green);
   color: #FFFFFF;
@@ -246,7 +293,7 @@ a {
 }
 
 .btn-wa-submit {
-  background-color: var(--accent-green);
+  background: linear-gradient(135deg, #25D366 0%, #1EB855 100%);
   color: #FFFFFF;
   padding: 14px 24px;
   font-size: 1rem;
@@ -257,14 +304,14 @@ a {
 }
 
 .btn-wa-submit:hover {
-  background-color: var(--accent-green-hover);
+  background: linear-gradient(135deg, #28E06D 0%, #17A048 100%);
   transform: translateY(-2px);
   box-shadow: 0 6px 22px rgba(37, 211, 102, 0.42);
 }
 
 /* 4. ANNOUNCEMENT TOP BAR */
 .announcement-bar {
-  background-color: #0B1120;
+  background: linear-gradient(90deg, #0B1120 0%, #1E1B4B 50%, #0B1120 100%);
   color: #E2E8F0;
   font-size: 0.85rem;
   padding: 9px 0;
@@ -280,14 +327,26 @@ a {
   text-align: center;
 }
 
+.announcement-pill {
+  background-color: var(--accent-orange);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+}
+
 .announcement-link {
-  color: #60A5FA;
+  color: #FBBF24;
   font-weight: 700;
   text-decoration: underline;
+  transition: color var(--transition-fast);
 }
 
 .announcement-link:hover {
-  color: #93C5FD;
+  color: #FDE68A;
 }
 
 /* 5. NAVBAR / HEADER */
@@ -295,7 +354,7 @@ a {
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.94);
+  background-color: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-light);
@@ -336,7 +395,7 @@ a {
 }
 
 .logo-dot {
-  color: var(--accent-green);
+  color: var(--accent-orange);
 }
 
 .text-white {
@@ -409,7 +468,7 @@ a {
 /* 6. HERO SECTION */
 .hero-section {
   padding: 70px 0 90px;
-  background: radial-gradient(circle at top right, #EBF2FF 0%, #FFFFFF 65%);
+  background: radial-gradient(circle at top right, #EBF2FF 0%, #FFF8F3 40%, #FFFFFF 75%);
   position: relative;
   overflow: hidden;
 }
@@ -425,9 +484,9 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #EBF2FF;
-  border: 1px solid var(--primary-border);
-  color: var(--primary);
+  background-color: #FFF0E6;
+  border: 1px solid var(--accent-orange-border);
+  color: #C2410C;
   font-size: 0.85rem;
   font-weight: 700;
   padding: 6px 16px;
@@ -438,14 +497,14 @@ a {
 .badge-dot {
   width: 8px;
   height: 8px;
-  background-color: var(--accent-green);
+  background-color: var(--accent-orange);
   border-radius: 50%;
   display: inline-block;
-  box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.25);
+  box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.25);
 }
 
 .hero-title {
-  font-size: 3.1rem;
+  font-size: 3.15rem;
   font-weight: 800;
   line-height: 1.18;
   color: var(--text-heading);
@@ -453,8 +512,11 @@ a {
   letter-spacing: -0.03em;
 }
 
+/* Highlight Text dengan Gradasi Biru ke Oranye Ceria */
 .text-highlight {
-  color: var(--primary);
+  background: linear-gradient(135deg, var(--primary) 20%, var(--accent-orange) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   position: relative;
   display: inline-block;
 }
@@ -494,6 +556,18 @@ a {
   font-weight: 800;
   color: var(--text-heading);
   line-height: 1.2;
+}
+
+.stat-number.text-orange {
+  color: var(--accent-orange);
+}
+
+.stat-number.text-blue {
+  color: var(--primary);
+}
+
+.stat-number.text-green {
+  color: var(--emerald);
 }
 
 .stat-label {
@@ -539,7 +613,7 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(11, 17, 32, 0.92) 0%, rgba(11, 17, 32, 0.5) 60%, transparent 100%);
+  background: linear-gradient(to top, rgba(11, 17, 32, 0.94) 0%, rgba(11, 17, 32, 0.5) 60%, transparent 100%);
   color: #FFFFFF;
   padding: 30px 24px 20px;
 }
@@ -590,7 +664,7 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(8px);
   padding: 10px 16px;
   border-radius: var(--radius-lg);
@@ -619,12 +693,14 @@ a {
 .badge-top-left {
   top: 25px;
   left: -25px;
+  border-left: 3.5px solid var(--accent-orange);
 }
 
 .badge-bottom-right {
   bottom: 35px;
   right: -25px;
   animation-delay: 2s;
+  border-left: 3.5px solid var(--primary);
 }
 
 @keyframes float {
@@ -646,12 +722,12 @@ a {
   border: 1px solid var(--border-card);
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-normal);
+  position: relative;
 }
 
 .feature-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--primary-border);
 }
 
 .feature-icon {
@@ -664,8 +740,21 @@ a {
   margin-bottom: 20px;
 }
 
+/* Variasi Warna Ikon Fitur (Dynamic Palette) */
 .bg-blue-soft {
   background-color: var(--primary-light);
+}
+
+.bg-orange-soft {
+  background-color: var(--accent-orange-light);
+}
+
+.bg-emerald-soft {
+  background-color: var(--emerald-light);
+}
+
+.bg-amber-soft {
+  background-color: var(--accent-amber-light);
 }
 
 .feature-card h3 {
@@ -724,11 +813,9 @@ a {
 }
 
 .value-bullet {
-  width: 22px;
-  height: 22px;
-  min-width: 22px;
-  background-color: var(--primary-light);
-  color: var(--primary);
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -736,6 +823,26 @@ a {
   font-weight: 800;
   font-size: 0.75rem;
   margin-top: 2px;
+}
+
+.bullet-blue {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.bullet-orange {
+  background-color: var(--accent-orange-light);
+  color: var(--accent-orange);
+}
+
+.bullet-emerald {
+  background-color: var(--accent-green-light);
+  color: #15803D;
+}
+
+.bullet-amber {
+  background-color: var(--accent-amber-light);
+  color: #B45309;
 }
 
 .about-cta-box {
@@ -752,11 +859,24 @@ a {
 }
 
 .vision-card {
-  background: linear-gradient(135deg, #0056FF 0%, #003FB3 100%);
+  background: linear-gradient(135deg, #0056FF 0%, #003699 100%);
   color: #FFFFFF;
   padding: 35px;
   border-radius: var(--radius-xl);
   box-shadow: 0 15px 30px rgba(0, 86, 255, 0.22);
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-card::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(255, 107, 0, 0.35) 0%, transparent 70%);
+  border-radius: 50%;
 }
 
 .vision-header {
@@ -808,8 +928,9 @@ a {
 }
 
 .mission-header .vision-badge {
-  background-color: var(--primary-light);
-  color: var(--primary);
+  background-color: var(--accent-orange-light);
+  color: var(--accent-orange);
+  font-weight: 700;
 }
 
 .mission-header h3 {
@@ -835,8 +956,8 @@ a {
   width: 26px;
   height: 26px;
   min-width: 26px;
-  background-color: var(--accent-green-light);
-  color: #15803D;
+  background-color: var(--accent-orange-light);
+  color: var(--accent-orange);
   font-weight: 800;
   font-size: 0.85rem;
   border-radius: 50%;
@@ -875,7 +996,6 @@ a {
 .curriculum-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-xl);
-  border-color: var(--primary-border);
 }
 
 .featured-curriculum {
@@ -897,8 +1017,10 @@ a {
   z-index: 5;
 }
 
+/* Badge Favorit Oranye Ceria */
 .badge-pop {
-  background-color: var(--primary);
+  background: linear-gradient(135deg, var(--accent-orange) 0%, #E65A00 100%);
+  color: #FFFFFF;
 }
 
 .curriculum-image {
@@ -922,13 +1044,16 @@ a {
   position: absolute;
   bottom: 12px;
   right: 12px;
-  background-color: #FFFFFF;
-  color: var(--text-heading);
   font-size: 0.75rem;
   font-weight: 700;
   padding: 4px 10px;
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-sm);
+}
+
+.tag-orange {
+  background-color: var(--accent-orange);
+  color: #FFFFFF;
 }
 
 .tag-primary {
@@ -993,7 +1118,7 @@ a {
   content: "▹";
   position: absolute;
   left: 0;
-  color: var(--primary);
+  color: var(--accent-orange);
   font-weight: bold;
 }
 
@@ -1007,6 +1132,11 @@ a {
   font-size: 0.84rem;
   font-weight: 600;
   color: var(--text-light);
+}
+
+.xp-badge {
+  color: var(--accent-orange);
+  font-weight: 700;
 }
 
 /* Roadmap Stepper */
@@ -1053,9 +1183,13 @@ a {
   font-family: var(--font-mono);
   font-size: 1.25rem;
   font-weight: 800;
-  color: var(--primary);
   margin-bottom: 6px;
 }
+
+.step-blue .step-num { color: var(--primary); }
+.step-orange .step-num { color: var(--accent-orange); }
+.step-emerald .step-num { color: var(--emerald); }
+.step-amber .step-num { color: var(--accent-amber); }
 
 .step-card h4 {
   font-size: 1.05rem;
@@ -1072,7 +1206,7 @@ a {
 
 .step-arrow {
   font-size: 1.6rem;
-  color: #94A3B8;
+  color: #CBD5E1;
   font-weight: bold;
 }
 
@@ -1107,8 +1241,8 @@ a {
 }
 
 .popular-card {
-  border: 2.5px solid var(--primary);
-  box-shadow: 0 16px 36px rgba(0, 86, 255, 0.15);
+  border: 2.5px solid var(--accent-orange);
+  box-shadow: 0 16px 36px rgba(255, 107, 0, 0.15);
   transform: scale(1.02);
   background-color: #FFFFFF;
 }
@@ -1117,18 +1251,19 @@ a {
   transform: scale(1.02) translateY(-6px);
 }
 
+/* Ribbon Populer Oranye Ceria */
 .popular-ribbon {
   position: absolute;
   top: -14px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--primary);
+  background: linear-gradient(135deg, var(--accent-orange) 0%, var(--accent-amber) 100%);
   color: #FFFFFF;
   font-size: 0.8rem;
   font-weight: 800;
-  padding: 5px 18px;
+  padding: 5px 20px;
   border-radius: var(--radius-pill);
-  box-shadow: 0 4px 10px rgba(0, 86, 255, 0.35);
+  box-shadow: 0 4px 12px rgba(255, 107, 0, 0.35);
   white-space: nowrap;
 }
 
@@ -1182,6 +1317,12 @@ a {
   text-align: center;
 }
 
+.popular-card .session-info {
+  background-color: var(--accent-orange-light);
+  color: var(--accent-orange);
+  border-color: var(--accent-orange-border);
+}
+
 .pricing-features {
   list-style: none;
   display: flex;
@@ -1217,7 +1358,7 @@ a {
 
 .pricing-guarantee {
   background-color: var(--accent-green-light);
-  border: 1px solid #BBF7D0;
+  border: 1px solid var(--accent-green-border);
   color: #14532D;
   padding: 16px 24px;
   border-radius: var(--radius-lg);
@@ -1311,7 +1452,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 86, 255, 0.65);
+  background: linear-gradient(135deg, rgba(0, 86, 255, 0.7) 0%, rgba(255, 107, 0, 0.65) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1327,7 +1468,7 @@ a {
   color: #FFFFFF;
   font-weight: 700;
   font-size: 0.85rem;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.45);
   padding: 6px 14px;
   border-radius: var(--radius-pill);
 }
@@ -1340,11 +1481,24 @@ a {
   display: inline-block;
   font-size: 0.75rem;
   font-weight: 700;
-  color: var(--primary);
-  background-color: var(--primary-light);
   padding: 3px 10px;
   border-radius: var(--radius-pill);
   margin-bottom: 8px;
+}
+
+.tag-badge-blue {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.tag-badge-orange {
+  background-color: var(--accent-orange-light);
+  color: var(--accent-orange);
+}
+
+.tag-badge-emerald {
+  background-color: var(--accent-green-light);
+  color: #15803D;
 }
 
 .gallery-info h4 {
@@ -1431,7 +1585,7 @@ a {
 }
 
 .lightbox-close:hover {
-  background-color: #EF4444;
+  background-color: var(--accent-orange);
 }
 
 /* 12. FREE TRIAL FORM SECTION */
@@ -1450,23 +1604,25 @@ a {
 }
 
 .trial-info-panel {
-  background: linear-gradient(135deg, #0056FF 0%, #003AA6 100%);
+  background: linear-gradient(135deg, #0056FF 0%, #003699 60%, #1E1B4B 100%);
   color: #FFFFFF;
   padding: 50px 40px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .badge-pill-light {
   display: inline-block;
   align-self: flex-start;
-  background-color: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, var(--accent-orange) 0%, var(--accent-amber) 100%);
   color: #FFFFFF;
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 800;
   padding: 4px 14px;
   border-radius: var(--radius-pill);
   margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(255, 107, 0, 0.3);
 }
 
 .trial-info-panel h2 {
@@ -1500,12 +1656,23 @@ a {
   width: 42px;
   height: 42px;
   min-width: 42px;
-  background-color: rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
+}
+
+.tb-icon.icon-amber {
+  background-color: rgba(245, 158, 11, 0.25);
+}
+
+.tb-icon.icon-blue {
+  background-color: rgba(0, 86, 255, 0.35);
+}
+
+.tb-icon.icon-green {
+  background-color: rgba(37, 211, 102, 0.25);
 }
 
 .t-benefit strong {
@@ -1594,7 +1761,7 @@ a {
 }
 
 .required {
-  color: #DC2626;
+  color: var(--accent-orange);
 }
 
 .form-group input,
@@ -1649,7 +1816,7 @@ a {
 
 .alert-success {
   background-color: var(--accent-green-light);
-  border: 1px solid #86EFAC;
+  border: 1px solid var(--accent-green-border);
   color: #14532D;
   display: flex;
   gap: 14px;
@@ -1690,6 +1857,7 @@ a {
 .testi-rating {
   font-size: 1rem;
   margin-bottom: 14px;
+  color: var(--accent-amber);
 }
 
 .testi-text {
@@ -1712,13 +1880,24 @@ a {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary) 0%, #003AA6 100%);
   color: #FFFFFF;
   font-weight: 800;
   font-size: 0.95rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.avatar-blue {
+  background: linear-gradient(135deg, var(--primary) 0%, #003AA6 100%);
+}
+
+.avatar-orange {
+  background: linear-gradient(135deg, var(--accent-orange) 0%, #D95300 100%);
+}
+
+.avatar-emerald {
+  background: linear-gradient(135deg, var(--emerald) 0%, #059669 100%);
 }
 
 .testi-profile strong {
@@ -1773,7 +1952,7 @@ a {
 .faq-toggle-icon {
   font-size: 1.5rem;
   font-weight: 400;
-  color: var(--primary);
+  color: var(--accent-orange);
   line-height: 1;
   transition: transform var(--transition-fast);
 }
@@ -1833,12 +2012,27 @@ a {
   width: 40px;
   height: 40px;
   min-width: 40px;
-  background-color: var(--primary-light);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.15rem;
+}
+
+.c-icon.bg-c-blue {
+  background-color: var(--primary-light);
+}
+
+.c-icon.bg-c-green {
+  background-color: var(--accent-green-light);
+}
+
+.c-icon.bg-c-orange {
+  background-color: var(--accent-orange-light);
+}
+
+.c-icon.bg-c-amber {
+  background-color: var(--accent-amber-light);
 }
 
 .c-item strong {
@@ -1861,7 +2055,7 @@ a {
 
 .direct-wa-card {
   background-color: var(--accent-green-light);
-  border: 1px solid #86EFAC;
+  border: 1px solid var(--accent-green-border);
   padding: 25px;
   border-radius: var(--radius-lg);
 }

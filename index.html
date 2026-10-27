@@ -1,193 +1,1230 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+  <!-- ==========================================================================
+       Coding First - Website Resmi Akademi Coding, Robotika & IoT Anak & Remaja
+       SEO & Meta Tag Konfigurasi Dasar
+       ========================================================================== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page Template</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Coding First - Kursus Coding, Robotika & IoT untuk Anak & Remaja</title>
+  <meta name="description" content="Coding First adalah akademi teknologi terdepan untuk anak usia 6-18 tahun. Belajar coding, robotika, dan IoT dengan kurikulum berstandar internasional, interaktif, dan berorientasi proyek. Daftar Free Trial sekarang!">
+  <meta name="keywords" content="coding first, kursus coding anak, kursus robotika anak, belajar IoT remaja, les programming anak, scratch, python, arduino, stem education indonesia">
+  <meta name="author" content="Coding First Academy">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook / WhatsApp Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://codingfirst.id/">
+  <meta property="og:title" content="Coding First - Mempersiapkan Generasi Inovator Digital Masa Depan">
+  <meta property="og:description" content="Kursus coding, robotika, dan Internet of Things (IoT) interaktif untuk anak & remaja. Jadikan anak Anda pencipta teknologi, bukan sekadar penikmat.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Coding First - Kursus Coding, Robotika & IoT Anak">
+  <meta name="twitter:description" content="Kembangkan logika, kreativitas, dan keterampilan masa depan anak bersama Coding First. Coba kelas Free Trial gratis sekarang!">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Theme Color untuk Mobile Browser -->
+  <meta name="theme-color" content="#0056FF">
+
+  <!-- Favicon Icon (Vector SVG Inline) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230056FF'/><path d='M32 35 L18 50 L32 65' stroke='white' stroke-width='8' stroke-linecap='round' stroke-linejoin='round' fill='none'/><path d='M68 35 L82 50 L68 65' stroke='white' stroke-width='8' stroke-linecap='round' stroke-linejoin='round' fill='none'/><path d='M56 30 L44 70' stroke='%2325D366' stroke-width='8' stroke-linecap='round'/></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet Utama -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Header / Navbar -->
-  <header class="navbar">
+  <!-- ==========================================================================
+       1. Top Announcement Bar (Promo & Hotline)
+       ========================================================================== -->
+  <aside class="announcement-bar">
+    <div class="container announcement-content">
+      <span>🚀 <strong>Pendaftaran Gelombang Baru Dibuka:</strong> Dapatkan Kelas Uji Coba Gratis (Free Trial) & Diskon Registrasi s.d. 30%!</span>
+      <a href="#trial" class="announcement-link">Klaim Slot Sekarang &rarr;</a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       2. Navbar / Header Navigasi Utama
+       ========================================================================== -->
+  <header class="navbar" id="navbar">
     <div class="container nav-container">
-      <a href="#" class="logo">MyBrand<span>.</span></a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigasi">
-        ☰
+      <!-- Logo Branding -->
+      <a href="#beranda" class="logo" aria-label="Coding First Beranda">
+        <div class="logo-mark">
+          <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="#0056FF"/>
+            <path d="M14 15L8 20L14 25" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M26 15L32 20L26 25" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 12L18 28" stroke="#25D366" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span>Coding</span>First<span class="logo-dot">.</span>
+        </div>
+      </a>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button class="nav-toggle" id="navToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
       </button>
+
+      <!-- Menu Navigasi -->
       <nav class="nav-menu" id="navMenu">
-        <a href="#beranda">Beranda</a>
-        <a href="#tentang">Tentang</a>
-        <a href="#layanan">Layanan</a>
-        <a href="#harga">Harga</a>
-        <a href="#kontak" class="btn btn-primary nav-btn">Hubungi Kami</a>
+        <ul class="nav-links">
+          <li><a href="#beranda" class="nav-link active">Beranda</a></li>
+          <li><a href="#profil" class="nav-link">Profil & Visi</a></li>
+          <li><a href="#kurikulum" class="nav-link">Kurikulum</a></li>
+          <li><a href="#harga" class="nav-link">Paket Biaya</a></li>
+          <li><a href="#galeri" class="nav-link">Galeri Kegiatan</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#kontak" class="nav-link">Kontak</a></li>
+        </ul>
+        <div class="nav-cta-group">
+          <!-- Tombol WhatsApp Cepat -->
+          <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Coding%20First,%20saya%20ingin%20konsultasi%20program%20kursus%20anak." 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="btn btn-wa-outline btn-sm">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+            Tanya Admin
+          </a>
+          <!-- Tombol Free Trial -->
+          <a href="#trial" class="btn btn-primary btn-sm">Daftar Free Trial</a>
+        </div>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="beranda" class="hero">
-    <div class="container hero-container">
-      <div class="hero-text">
-        <span class="badge">Selamat Datang</span>
-        <h1>Solusi Cepat untuk Kebutuhan Bisnis Anda</h1>
-        <p>Ini adalah template dummy landing page sederhana yang siap Anda ubah sesuai kebutuhan produk atau layanan Anda.</p>
-        <div class="hero-actions">
-          <a href="#kontak" class="btn btn-primary">Mulai Sekarang</a>
-          <a href="#layanan" class="btn btn-outline">Pelajari Lebih Lanjut</a>
-        </div>
-      </div>
-      <div class="hero-image">
-        <div class="img-placeholder">
-          <span>Dummy Image (500 x 350)</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Fitur / Layanan -->
-  <section id="layanan" class="section bg-light">
-    <div class="container">
-      <div class="section-title">
-        <h2>Layanan Kami</h2>
-        <p>Fitur dan keunggulan utama yang kami sediakan untuk Anda.</p>
-      </div>
-      <div class="cards-grid">
-        <div class="card">
-          <div class="card-icon">⚡</div>
-          <h3>Cepat & Efisien</h3>
-          <p>Deskripsi singkat tentang layanan pertama yang cepat, andal, dan mudah diakses.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">🔒</div>
-          <h3>Aman & Terpercaya</h3>
-          <p>Deskripsi singkat tentang sistem keamanan data serta perlindungan privasi pengguna.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">💡</div>
-          <h3>Mudah Digunakan</h3>
-          <p>Deskripsi singkat tentang antarmuka ramah pengguna yang intuitif bagi siapa saja.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Tentang Kami -->
-  <section id="tentang" class="section">
-    <div class="container about-container">
-      <div class="about-image">
-        <div class="img-placeholder">
-          <span>Tentang Kami (450 x 300)</span>
-        </div>
-      </div>
-      <div class="about-text">
-        <h2>Tentang Perusahaan Kami</h2>
-        <p>Kami berdedikasi untuk memberikan hasil terbaik bagi setiap klien. Teks ini merupakan dummy teks yang bisa Anda ganti dengan profil perusahaan atau tim Anda.</p>
-        <ul class="about-list">
-          <li>✔ Pengalaman lebih dari 5 tahun di industri</li>
-          <li>✔ Dukungan pelanggan responsif 24/7</li>
-          <li>✔ Garansi kepuasan atau revisi gratis</li>
-        </ul>
-        <a href="#kontak" class="btn btn-primary">Konsultasi Gratis</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Harga / Pricing -->
-  <section id="harga" class="section bg-light">
-    <div class="container">
-      <div class="section-title">
-        <h2>Pilihan Paket</h2>
-        <p>Pilih paket yang sesuai dengan skala dan kebutuhan Anda.</p>
-      </div>
-      <div class="pricing-grid">
-        <!-- Paket 1 -->
-        <div class="pricing-card">
-          <h3>Dasar</h3>
-          <div class="price">Rp 99.000 <span>/bln</span></div>
-          <p class="price-desc">Cocok untuk pemula atau individu.</p>
-          <ul class="pricing-features">
-            <li>✔ 1 Proyek Aktif</li>
-            <li>✔ Dukungan Email</li>
-            <li>✔ Akses Template Dasar</li>
-            <li class="disabled">✖ Domain Kustom</li>
-          </ul>
-          <a href="#kontak" class="btn btn-outline full-width">Pilih Paket</a>
-        </div>
-        <!-- Paket 2 (Featured) -->
-        <div class="pricing-card popular">
-          <div class="popular-badge">Populer</div>
-          <h3>Profesional</h3>
-          <div class="price">Rp 249.000 <span>/bln</span></div>
-          <p class="price-desc">Paling pas untuk bisnis berkembang.</p>
-          <ul class="pricing-features">
-            <li>✔ 5 Proyek Aktif</li>
-            <li>✔ Prioritas Chat 24/7</li>
-            <li>✔ Semua Akses Template</li>
-            <li>✔ Domain Kustom</li>
-          </ul>
-          <a href="#kontak" class="btn btn-primary full-width">Pilih Paket</a>
-        </div>
-        <!-- Paket 3 -->
-        <div class="pricing-card">
-          <h3>Enterprise</h3>
-          <div class="price">Rp 599.000 <span>/bln</span></div>
-          <p class="price-desc">Solusi lengkap untuk tim besar.</p>
-          <ul class="pricing-features">
-            <li>✔ Proyek Tanpa Batas</li>
-            <li>✔ Dedicated Account Manager</li>
-            <li>✔ Kustomisasi Penuh</li>
-            <li>✔ SLA 99.9%</li>
-          </ul>
-          <a href="#kontak" class="btn btn-outline full-width">Pilih Paket</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Kontak Form -->
-  <section id="kontak" class="section">
-    <div class="container">
-      <div class="section-title">
-        <h2>Hubungi Kami</h2>
-        <p>Ada pertanyaan? Tinggalkan pesan, kami akan segera merespons.</p>
-      </div>
-      <div class="contact-box">
-        <form id="contactForm">
-          <div class="form-group">
-            <label for="nama">Nama Lengkap</label>
-            <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+  <main>
+    <!-- ==========================================================================
+         3. Hero Section (Inspiratif, Clean & High Converting)
+         ========================================================================== -->
+    <section id="beranda" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Akademi Teknologi & Inovasi Anak Usia 6 – 18 Tahun
           </div>
-          <div class="form-group">
-            <label for="email">Alamat Email</label>
-            <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+          <h1 class="hero-title">
+            Bimbing Anak Menjadi <span class="text-highlight">Pencipta Teknologi</span>, Bukan Sekadar Pengguna!
+          </h1>
+          <p class="hero-subtitle">
+            Coding First menghadirkan kelas interaktif <strong>Coding, Robotika, dan Internet of Things (IoT)</strong> yang melatih daya nalar logis, computational thinking, dan kreativitas masa depan dengan cara yang seru dan aplikatif.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#trial" class="btn btn-primary btn-lg">
+              🎯 Ikuti Free Trial Online
+            </a>
+            <a href="#kurikulum" class="btn btn-secondary btn-lg">
+              Jelajahi Kurikulum &rarr;
+            </a>
           </div>
-          <div class="form-group">
-            <label for="pesan">Pesan</label>
-            <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis pesan Anda di sini..." required></textarea>
+
+          <!-- Social Proof / Metrik Kunci -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">1.500+</span>
+              <span class="stat-label">Siswa Aktif & Alumni</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">98%</span>
+              <span class="stat-label">Kepuasan Orang Tua</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Praktik & Berbasis Proyek</span>
+            </div>
           </div>
-          <button type="submit" class="btn btn-primary full-width">Kirim Pesan</button>
-        </form>
-        <div id="formSuccess" class="form-alert hidden">
-          Terima kasih! Pesan dummy Anda berhasil dikirim.
+        </div>
+
+        <!-- Hero Visual Illustration / Interactive Mockup -->
+        <div class="hero-visual">
+          <div class="hero-card-wrapper">
+            <div class="floating-badge badge-top-left">
+              <span class="f-icon">🤖</span>
+              <div>
+                <strong>Smart Robotics</strong>
+                <small>Sensor & Otomasi</small>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom-right">
+              <span class="f-icon">⚡</span>
+              <div>
+                <strong>Coding Game & App</strong>
+                <small>Python & Scratch</small>
+              </div>
+            </div>
+
+            <div class="main-hero-image-box">
+              <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=80" 
+                   alt="Anak-anak belajar coding dan merakit robotika di Coding First" 
+                   class="hero-img"
+                   loading="eager">
+              <div class="hero-image-overlay">
+                <div class="overlay-tag">
+                  <span class="pulse-circle"></span>
+                  Kelas Live Sedang Berlangsung
+                </div>
+                <p class="overlay-caption">"Anak saya sekarang bisa merancang game edukasi dan robot lampu otomatis sendiri!"</p>
+                <span class="overlay-author">— Ibu Marlina, Orang Tua Siswa Grade 5</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
+    <!-- ==========================================================================
+         4. Keunggulan Coding First (Kenapa Memilih Kami)
+         ========================================================================== -->
+    <section class="section bg-light usp-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Pilar Unggulan</span>
+          <h2 class="section-heading">Mengapa Orang Tua Mempercayakan Coding First?</h2>
+          <p class="section-desc">Kami memadukan kurikulum teknologi mutakhir dengan pendekatan pedagogi yang menyenangkan, aman, dan memicu rasa ingin tahu anak.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon bg-blue-soft">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="#0056FF" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <h3>Kurikulum Berjenjang Internasional</h3>
+            <p>Disusun mengacu pada standar CSTA (Computer Science Teachers Association) dan disesuaikan dengan rentang usia perkembangan kognitif anak.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon bg-blue-soft">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="#0056FF" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3>Project-Based Learning (100% Praktik)</h3>
+            <p>Bukan hafalan teori! Setiap pertemuan menghasilkan proyek nyata mulai dari game animasi, robot sensor gerak, hingga prototipe smart home IoT.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon bg-blue-soft">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="#0056FF" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3>Mentor Ahli & Ramah Anak</h3>
+            <p>Dipandu oleh instruktur lulusan Computer Science & Engineering yang tersertifikasi serta berpengalaman mengajar anak dengan penuh kesabaran.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon bg-blue-soft">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="#0056FF" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+            </div>
+            <h3>Sertifikat & Portofolio Karya</h3>
+            <p>Setiap level selesai, siswa mendapatkan sertifikat kompetensi resmi serta portofolio karya digital yang dapat dibagikan untuk masa depan akademik.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. Halaman Profil & Visi-Misi (Key Deliverable 2)
+         ========================================================================== -->
+    <section id="profil" class="section about-section">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Kolom Narasi Brand & Latar Belakang -->
+          <div class="about-narrative">
+            <span class="section-tag">Tentang Coding First</span>
+            <h2 class="section-heading">Mencetak Generasi Solutif di Era Kecerdasan Buatan (AI)</h2>
+            <p class="paragraph-lead">
+              <strong>Coding First</strong> didirikan dengan satu keyakinan mendasar: bahasa pemrograman, robotika, dan teknologi cerdas (IoT) adalah literasi baru abad ke-21.
+            </p>
+            <p class="paragraph-body">
+              Kami tidak hanya melatih anak mengetik baris kode, melainkan menanamkan <em>Computational Thinking</em>: kemampuan mendekomposisi masalah kompleks, mengenali pola, berpikir algoritmis, dan menciptakan solusi nyata. Dengan lingkungan belajar yang suportif, kami mengubah waktu bermain gawai (screen time) menjadi waktu berkreasi yang bernilai tinggi.
+            </p>
+
+            <!-- 4 Nilai Utama (Core Values) -->
+            <div class="core-values-list">
+              <div class="value-item">
+                <div class="value-bullet">✓</div>
+                <div>
+                  <strong>Creative Exploration:</strong> Mendorong eksplorasi ide unik tanpa takut berbuat salah dalam coding.
+                </div>
+              </div>
+              <div class="value-item">
+                <div class="value-bullet">✓</div>
+                <div>
+                  <strong>Logical Reasoning:</strong> Membiasakan alur berpikir kritis dan penyelesaian masalah terstruktur.
+                </div>
+              </div>
+              <div class="value-item">
+                <div class="value-bullet">✓</div>
+                <div>
+                  <strong>Hands-on Engineering:</strong> Menggabungkan software dan hardware fisik (robot & sensor) secara nyata.
+                </div>
+              </div>
+              <div class="value-item">
+                <div class="value-bullet">✓</div>
+                <div>
+                  <strong>Future-Ready Mindset:</strong> Mempersiapkan generasi muda unggul menghadapi tren AI, IoT, dan otomasi.
+                </div>
+              </div>
+            </div>
+
+            <div class="about-cta-box">
+              <a href="#trial" class="btn btn-primary">Daftarkan Anak Free Trial</a>
+              <a href="#kontak" class="btn btn-outline">Kunjungi Studio Kami</a>
+            </div>
+          </div>
+
+          <!-- Kolom Visi & Misi Cards -->
+          <div class="about-vision-cards">
+            <!-- Card Visi -->
+            <div class="vision-card">
+              <div class="vision-header">
+                <div class="vision-icon">🌟</div>
+                <div>
+                  <span class="vision-badge">Arah Masa Depan</span>
+                  <h3>Visi Kami</h3>
+                </div>
+              </div>
+              <p class="vision-text">
+                "Menjadi lembaga pendidikan sains dan teknologi anak terdepan di Indonesia yang melahirkan generasi inovator muda, berpikir kritis, berdaya cipta tinggi, dan siap bersaing di kancah global."
+              </p>
+            </div>
+
+            <!-- Card Misi -->
+            <div class="mission-card">
+              <div class="mission-header">
+                <div class="mission-icon">🎯</div>
+                <div>
+                  <span class="vision-badge">Langkah Nyata</span>
+                  <h3>Misi Kami</h3>
+                </div>
+              </div>
+              <ol class="mission-list">
+                <li>
+                  <span class="m-num">1</span>
+                  <div class="m-desc">
+                    <strong>Pendidikan Inklusif & Menyenangkan:</strong> Menghadirkan pembelajaran coding dan rekayasa teknologi yang mudah dipahami anak usia dini hingga remaja.
+                  </div>
+                </li>
+                <li>
+                  <span class="m-num">2</span>
+                  <div class="m-desc">
+                    <strong>Pengembangan Kurikulum Holistik:</strong> Mengintegrasikan STEM (Science, Technology, Engineering, Math) dengan perangkat keras IoT dan robotika terkini.
+                  </div>
+                </li>
+                <li>
+                  <span class="m-num">3</span>
+                  <div class="m-desc">
+                    <strong>Pembinaan Portofolio & Kompetisi:</strong> Memfasilitasi siswa untuk unjuk karya, mengikuti olimpiade sains & kompetisi robotika tingkat nasional maupun global.
+                  </div>
+                </li>
+                <li>
+                  <span class="m-num">4</span>
+                  <div class="m-desc">
+                    <strong>Kemitraan Edukasi:</strong> Berkolaborasi dengan orang tua, sekolah, dan industri untuk membangun ekosistem digital yang sehat bagi anak.
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. Halaman Kurikulum & Program Belajar (Key Deliverable 3)
+         ========================================================================== -->
+    <section id="kurikulum" class="section bg-light curriculum-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Jalur Pembelajaran</span>
+          <h2 class="section-heading">Program & Kurikulum Terarah Sesuai Usia</h2>
+          <p class="section-desc">Dirancang berjenjang dari pengenalan logika visual hingga perakitan perangkat keras IoT dan pemrograman teks profesional.</p>
+        </div>
+
+        <div class="curriculum-grid">
+          <!-- Program 1: Little Coder -->
+          <div class="curriculum-card">
+            <div class="curriculum-badge">Usia 6 - 8 Tahun</div>
+            <div class="curriculum-image">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Little Coder Scratch" loading="lazy">
+              <span class="curriculum-tag">Pemula Visual</span>
+            </div>
+            <div class="curriculum-body">
+              <h3>Little Coder: Visual Logic & Game</h3>
+              <p class="curriculum-desc">Mengenal dasar logika komputer melalui metode visual block coding tanpa perlu mengetik sintaks rumit.</p>
+              <div class="curriculum-syllabus">
+                <h4>Materi Utama:</h4>
+                <ul>
+                  <li>Algoritma Sekuensial & Pola Visual</li>
+                  <li>Scratch Jr & Scratch 3.0 Animation</li>
+                  <li>Desain Game Sederhana (Maze & Arcade)</li>
+                  <li>Pengenalan Logika Kondisional (If-Else)</li>
+                </ul>
+              </div>
+              <div class="curriculum-meta">
+                <span>⏱ 12 Sesi / Level</span>
+                <span>🏆 Sertifikat Level 1</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Program 2: Young Developer -->
+          <div class="curriculum-card featured-curriculum">
+            <div class="curriculum-badge badge-pop">Paling Favorit • Usia 9 - 13 Tahun</div>
+            <div class="curriculum-image">
+              <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" alt="Junior Developer Python Web" loading="lazy">
+              <span class="curriculum-tag tag-primary">Coding & Game Dev</span>
+            </div>
+            <div class="curriculum-body">
+              <h3>Junior Dev: Python & Web Building</h3>
+              <p class="curriculum-desc">Transisi dari block coding ke bahasa teks sesungguhnya dengan Python, logika game, dan dasar website HTML/CSS.</p>
+              <div class="curriculum-syllabus">
+                <h4>Materi Utama:</h4>
+                <ul>
+                  <li>Struktur Bahasa Python (Variabel & Fungsi)</li>
+                  <li>Game Programming dengan Pygame / Roblox Lua</li>
+                  <li>Membangun Website Interaktif Pertama</li>
+                  <li>Algoritma Problem Solving & Mini Database</li>
+                </ul>
+              </div>
+              <div class="curriculum-meta">
+                <span>⏱ 16 Sesi / Level</span>
+                <span>🏆 Portofolio Game & Web</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Program 3: Robotics & IoT Inventor -->
+          <div class="curriculum-card">
+            <div class="curriculum-badge">Usia 10 - 18 Tahun</div>
+            <div class="curriculum-image">
+              <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80" alt="Robotics and IoT Maker" loading="lazy">
+              <span class="curriculum-tag tag-robot">Hardware & IoT</span>
+            </div>
+            <div class="curriculum-body">
+              <h3>Robotics & IoT: Smart Inventor</h3>
+              <p class="curriculum-desc">Mengkombinasikan software dan hardware nyata dengan microcontroller Arduino & ESP32 serta sensor pintar.</p>
+              <div class="curriculum-syllabus">
+                <h4>Materi Utama:</h4>
+                <ul>
+                  <li>Elektronika Dasar, Resistor & Aktuator</li>
+                  <li>Pemrograman Microcontroller (Arduino & ESP32)</li>
+                  <li>Perakitan Line Follower & Obstacle Robot</li>
+                  <li>Internet of Things (Smart Home & Cloud Telemetry)</li>
+                </ul>
+              </div>
+              <div class="curriculum-meta">
+                <span>⏱ 16 Sesi / Level</span>
+                <span>🏆 Robot Fisik Siap Pajang</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alur Tahapan Belajar (Roadmap) -->
+        <div class="curriculum-roadmap">
+          <h3 class="roadmap-title">Roadmap 4 Tahap Pembelajaran di Coding First</h3>
+          <div class="roadmap-steps">
+            <div class="step-card">
+              <div class="step-num">01</div>
+              <h4>Foundation</h4>
+              <p>Computational thinking, logic block, dan pengenalan konsep perulangan.</p>
+            </div>
+            <div class="step-arrow">&rarr;</div>
+            <div class="step-card">
+              <div class="step-num">02</div>
+              <h4>Application</h4>
+              <p>Pemrograman teks, struktur data awal, dan merakit rangkaian sensor sederhana.</p>
+            </div>
+            <div class="step-arrow">&rarr;</div>
+            <div class="step-card">
+              <div class="step-num">03</div>
+              <h4>Creation & IoT</h4>
+              <p>Mengkoneksikan perangkat ke WiFi, kontrol nirkabel, dan otomasi cerdas.</p>
+            </div>
+            <div class="step-arrow">&rarr;</div>
+            <div class="step-card">
+              <div class="step-num">04</div>
+              <h4>Exhibition</h4>
+              <p>Final project showcase di hadapan orang tua dan persiapan kompetisi resmi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. Paket Harga Kursus (Pricing Cards - Key Deliverable 3)
+         ========================================================================== -->
+    <section id="harga" class="section pricing-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Investasi Masa Depan</span>
+          <h2 class="section-heading">Paket Kursus yang Transparan & Fleksibel</h2>
+          <p class="section-desc">Pilih paket belajar yang paling cocok dengan ritme dan minat putra-putri Anda. Tanpa biaya tersembunyi!</p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Paket 1: Starter Explorer -->
+          <div class="pricing-card">
+            <div class="card-header-plan">
+              <h3>Paket Starter</h3>
+              <p class="plan-sub">Ideal untuk eksplorasi awal logika & coding mingguan.</p>
+            </div>
+            <div class="price-box">
+              <span class="currency">Rp</span>
+              <span class="amount">450.000</span>
+              <span class="period">/ bulan</span>
+            </div>
+            <div class="session-info">4 Sesi Pertemuan (1x per minggu @ 90 menit)</div>
+            
+            <ul class="pricing-features">
+              <li><span class="f-check">✔</span> Kelas Kecil (Maksimal 5 Siswa)</li>
+              <li><span class="f-check">✔</span> Akses Materi & Modul Digital</li>
+              <li><span class="f-check">✔</span> 1 Proyek Game / Animasi per Bulan</li>
+              <li><span class="f-check">✔</span> Laporan Evaluasi Bulanan ke Orang Tua</li>
+              <li><span class="f-check">✔</span> E-Sertifikat Kelulusan Level</li>
+              <li class="f-disabled"><span class="f-cross">✖</span> Kit Komponen Robot Fisik Bawa Pulang</li>
+              <li class="f-disabled"><span class="f-cross">✖</span> Sesi Konsultasi Private 1-on-1</li>
+            </ul>
+
+            <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Coding%20First,%20saya%20tertarik%20dengan%20Paket%20Starter%20(Rp%20450.000/bln).%20Boleh%20minta%20info%20jadwal%20yang%20tersedia?" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn btn-outline full-width">
+              Pilih Paket Starter
+            </a>
+          </div>
+
+          <!-- Paket 2: Innovator Bundle (POPULER) -->
+          <div class="pricing-card popular-card">
+            <div class="popular-ribbon">Paling Direkomendasikan</div>
+            <div class="card-header-plan">
+              <h3>Paket Innovator Pro</h3>
+              <p class="plan-sub">Pilihan terpopuler untuk coding intensif & praktik robotika.</p>
+            </div>
+            <div class="price-box">
+              <span class="currency">Rp</span>
+              <span class="amount">790.000</span>
+              <span class="period">/ bulan</span>
+            </div>
+            <div class="session-info">8 Sesi Pertemuan (2x per minggu @ 90 menit)</div>
+
+            <ul class="pricing-features">
+              <li><span class="f-check">✔</span> Kelas Semi-Privat (Maksimal 3 Siswa)</li>
+              <li><span class="f-check">✔</span> <strong>Gratis Starter Robotics / IoT Kit</strong> (Bisa dibawa pulang)</li>
+              <li><span class="f-check">✔</span> 2 Proyek Mandiri + 1 Final Exhibition Project</li>
+              <li><span class="f-check">✔</span> Akses Coding Sandbox Cloud 24/7</li>
+              <li><span class="f-check">✔</span> Laporan Progres Mingguan via WhatsApp</li>
+              <li><span class="f-check">✔</span> Sertifikat Fisik Berbarcode & Terverifikasi</li>
+              <li><span class="f-check">✔</span> Rekaman Video Kelas untuk Mengulang</li>
+            </ul>
+
+            <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Coding%20First,%20saya%20ingin%20mendaftar%20Paket%20Innovator%20Pro%20(Rp%20790.000/bln)%20yang%20lengkap%20dengan%20kit%20robotika." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn btn-primary full-width">
+              Ambil Paket Innovator
+            </a>
+          </div>
+
+          <!-- Paket 3: Private Mentorship & IoT Mastery -->
+          <div class="pricing-card">
+            <div class="card-header-plan">
+              <h3>Paket Private 1-on-1</h3>
+              <p class="plan-sub">Bimbingan eksklusif dengan kurikulum dan jadwal yang fleksibel.</p>
+            </div>
+            <div class="price-box">
+              <span class="currency">Rp</span>
+              <span class="amount">1.350.000</span>
+              <span class="period">/ bulan</span>
+            </div>
+            <div class="session-info">8 Sesi Private Mentoring (Jadwal Menyesuaikan)</div>
+
+            <ul class="pricing-features">
+              <li><span class="f-check">✔</span> Mentoring 1-on-1 Eksklusif</li>
+              <li><span class="f-check">✔</span> Custom Kurikulum Sesuai Minat Khusus Anak</li>
+              <li><span class="f-check">✔</span> <strong>Full Hardware IoT & Microcontroller Kit</strong></li>
+              <li><span class="f-check">✔</span> Bimbingan Persiapan Lomba / Olimpiade Coding</li>
+              <li><span class="f-check">✔</span> Bebas Reschedule Jadwal (Fleksibel)</li>
+              <li><span class="f-check">✔</span> Portofolio GitHub & Web Hosting Pribadi</li>
+              <li><span class="f-check">✔</span> Surat Rekomendasi Akademik dari Head Mentor</li>
+            </ul>
+
+            <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Coding%20First,%20saya%20ingin%20konsultasi%20Paket%20Private%201-on-1%20untuk%20anak%20saya." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn btn-outline full-width">
+              Pilih Paket Private
+            </a>
+          </div>
+        </div>
+
+        <div class="pricing-guarantee text-center">
+          <p>🛡️ <strong>Garansi Kepuasan Belajar:</strong> Jika anak merasa tidak cocok setelah sesi pertama, kami berikan jaminan pengembalian dana 100% tanpa syarat.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. Galeri & Dokumentasi Kegiatan (Key Deliverable 4)
+         ========================================================================== -->
+    <section id="galeri" class="section bg-light gallery-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Aktivitas & Karya Nyata</span>
+          <h2 class="section-heading">Dokumentasi Kelas, Workshop & Kompetisi</h2>
+          <p class="section-desc">Lihat keceriaan, keseriusan, dan kebanggaan anak-anak saat merancang algoritma game dan menguji rakitan robot IoT mereka.</p>
+        </div>
+
+        <!-- Filter Tab Kategori Modular (Mudah Diperbarui) -->
+        <div class="gallery-filter" id="galleryFilter">
+          <button class="filter-btn active" data-filter="all">Semua Foto (8)</button>
+          <button class="filter-btn" data-filter="coding">Coding & Game (3)</button>
+          <button class="filter-btn" data-filter="robotics">Robotika (3)</button>
+          <button class="filter-btn" data-filter="iot">IoT & Workshop (2)</button>
+        </div>
+
+        <!-- Gallery Grid Modular -->
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Item 1: Coding -->
+          <article class="gallery-card" data-category="coding">
+            <div class="gallery-thumb" onclick="openLightbox(this)" 
+                 data-src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=80" 
+                 data-caption="Sesi Kelas Block Coding & Logika Scratch di Ruang Kelas Interaktif Coding First">
+              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" alt="Kelas Coding Anak Scratch" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="zoom-icon">🔍 Klik Perbesar</span>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <span class="gallery-tag">Coding Anak</span>
+              <h4>Sesi Kelas Scratch & Logic Game</h4>
+              <p>Anak-anak kelas 3 SD merancang logika game tangkap apel dan animasi cerita.</p>
+            </div>
+          </article>
+
+          <!-- Item 2: Robotics -->
+          <article class="gallery-card" data-category="robotics">
+            <div class="gallery-thumb" onclick="openLightbox(this)" 
+                 data-src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=80" 
+                 data-caption="Perakitan Smart Robot Car dengan sensor ultrasonik pengukur jarak">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Perakitan Robotika Anak" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="zoom-icon">🔍 Klik Perbesar</span>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <span class="gallery-tag">Robotika</span>
+              <h4>Perakitan Autonomous Robot Car</h4>
+              <p>Mempelajari mekanika motor DC, roda gigi, dan sensor penghindar rintangan.</p>
+            </div>
+          </article>
+
+          <!-- Item 3: IoT -->
+          <article class="gallery-card" data-category="iot">
+            <div class="gallery-thumb" onclick="openLightbox(this)" 
+                 data-src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&w=1000&q=80" 
+                 data-caption="Proyek Smart Agriculture IoT dengan sensor kelembaban tanah dan dashboard mobile">
+              <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&w=600&q=80" alt="Proyek IoT Siswa Remaja" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="zoom-icon">🔍 Klik Perbesar</span>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <span class="gallery-tag">IoT Project</span>
+              <h4>Sistem Siram Tanaman Otomatis IoT</h4>
+              <p>Siswa mengkoneksikan sensor kelembaban tanah ke server cloud via ESP32.</p>
+            </div>
+          </article>
+
+          <!-- Item 4: Coding Python -->
+          <article class="gallery-card" data-category="coding">
+            <div class="gallery-thumb" onclick="openLightbox(this)" 
+                 data-src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1000&q=80" 
+                 data-caption="Mentoring intensif Python: memecahkan algoritma matematika bersama instruktur">
+              <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Mentoring Python Kelas Coding" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="zoom-icon">🔍 Klik Perbesar</span>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <span class="gallery-tag">Coding Python</span>
+              <h4>Mentoring Pemrograman Python</h4>
+              <p>Bimbingan tatap muka dengan studi kasus logika game kuis dan kalkulator interaktif.</p>
+            </div>
+          </article>
+
+          <!-- Item 5: Robotics Workshop -->
+          <article class="gallery-card" data-category="robotics">
+            <div class="gallery-thumb" onclick="openLightbox(this)" 
+                 data-src="https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?auto=format&fit=crop&w=1000&q=80" 
+                 data-caption="Weekend Workshop Robotika: Merakit lengan robotik hidrolik & servo motor">
+              <img src="https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?auto=format&fit=crop&w=600&q=80" alt="Workshop Robotika Weekend" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="zoom-icon">🔍 Klik Perbesar</span>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <span class="gallery-tag">Workshop Robotika</span>
+              <h4>Merakit Robotic Arm Controller</h4>
+              <p>Simulasi lengan robot pabrik cerdas yang dikendalikan melalui joystick analog.</p>
+            </div>
+          </article>
+
+          <!-- Item 6: IoT & Smart Home -->
+          <article class="gallery-card" data-category="iot">
+            <div class="gallery-thumb" onclick="openLightbox(this)" 
+                 data-src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&w=1000&q=80" 
+                 data-caption="Simulasi Smart Home Automation: Lampu dan kipas dikendalikan via smartphone">
+              <img src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&w=600&q=80" alt="Smart Home IoT Project" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="zoom-icon">🔍 Klik Perbesar</span>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <span class="gallery-tag">IoT Showcase</span>
+              <h4>Miniatur Smart Home Otomatis</h4>
+              <p>Proyek akhir kelas IoT: sensor gas LPG dan relay kendali sakelar lampu berbasis WiFi.</p>
+            </div>
+          </article>
+
+          <!-- Item 7: Coding Web Project -->
+          <article class="gallery-card" data-category="coding">
+            <div class="gallery-thumb" onclick="openLightbox(this)" 
+                 data-src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80" 
+                 data-caption="Diskusi tim dalam pembuatan website portofolio siswa kelas Junior Dev">
+              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" alt="Diskusi Web Project Siswa" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="zoom-icon">🔍 Klik Perbesar</span>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <span class="gallery-tag">Web Development</span>
+              <h4>Presentasi Web Karya Siswa</h4>
+              <p>Siswa mempresentasikan website buatan sendiri bertema penyelamatan lingkungan.</p>
+            </div>
+          </article>
+
+          <!-- Item 8: Robotics Competition -->
+          <article class="gallery-card" data-category="robotics">
+            <div class="gallery-thumb" onclick="openLightbox(this)" 
+                 data-src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1000&q=80" 
+                 data-caption="Coding First Exhibition Day: Anak-anak memamerkan karya robot mereka kepada orang tua">
+              <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80" alt="Exhibition Day Coding First" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="zoom-icon">🔍 Klik Perbesar</span>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <span class="gallery-tag">Exhibition Day</span>
+              <h4>Hari Pameran Karya & Sertifikasi</h4>
+              <p>Momen apresiasi dan penyerahan sertifikat di hadapan orang tua dan komunitas.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Lightbox untuk Preview Galeri -->
+    <div id="lightboxModal" class="lightbox-modal" onclick="closeLightbox(event)">
+      <div class="lightbox-content">
+        <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Tutup Preview">&times;</button>
+        <img id="lightboxImg" src="" alt="Pratinjau Foto Kegiatan">
+        <p id="lightboxCaption" class="lightbox-caption"></p>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         9. Form Pendaftaran Free Trial Online (Key Deliverable 5 & Form Integrasi)
+         ========================================================================== -->
+    <section id="trial" class="section trial-section">
+      <div class="container">
+        <div class="trial-card-container">
+          <div class="trial-info-panel">
+            <span class="badge-pill-light">Uji Coba 100% Gratis</span>
+            <h2>Rasakan Serunya Belajar di Coding First Tanpa Biaya!</h2>
+            <p>Daftarkan putra-putri Anda untuk mengikuti 1 sesi kelas Free Trial (60 menit). Anak akan langsung mencoba praktik coding membuat game atau merakit robot perdana mereka.</p>
+            
+            <div class="trial-benefits">
+              <div class="t-benefit">
+                <div class="tb-icon">🎯</div>
+                <div>
+                  <strong>Diagnostik Minat & Potensi Anak</strong>
+                  <p>Mentor kami mengamati kecenderungan logika & gaya belajar anak.</p>
+                </div>
+              </div>
+              <div class="t-benefit">
+                <div class="tb-icon">💻</div>
+                <div>
+                  <strong>Pilihan Kelas Online atau Offline</strong>
+                  <p>Fleksibel dari studio kami maupun dari kenyamanan rumah Anda.</p>
+                </div>
+              </div>
+              <div class="t-benefit">
+                <div class="tb-icon">💬</div>
+                <div>
+                  <strong>Sesi Konsultasi Eksklusif Orang Tua</strong>
+                  <p>Dapatkan arahan roadmap belajar teknologi yang tepat untuk anak.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="trial-contact-direct">
+              <p>Butuh bantuan langsung dari konsultan edukasi kami?</p>
+              <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Coding%20First,%20saya%20ingin%20tanya%20jadwal%20Free%20Trial%20terdekat." 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="link-wa-direct">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                </svg>
+                Chat WhatsApp Admin Langsung (+62 812-3456-7890)
+              </a>
+            </div>
+          </div>
+
+          <!-- Formulir Interaktif -->
+          <div class="trial-form-panel">
+            <div class="form-title-bar">
+              <h3>Formulir Pendaftaran Free Trial</h3>
+              <p>Isi data singkat berikut untuk konfirmasi reservasi slot.</p>
+            </div>
+
+            <form id="freeTrialForm" class="trial-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="studentName">Nama Lengkap Anak <span class="required">*</span></label>
+                  <input type="text" id="studentName" name="studentName" placeholder="Contoh: Muhammad Kevin" required>
+                </div>
+                <div class="form-group">
+                  <label for="studentAge">Usia / Kelas Sekolah <span class="required">*</span></label>
+                  <input type="text" id="studentAge" name="studentAge" placeholder="Contoh: 9 Tahun / Kelas 4 SD" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="parentName">Nama Orang Tua / Wali <span class="required">*</span></label>
+                  <input type="text" id="parentName" name="parentName" placeholder="Contoh: Ibu Rina / Bpk. Hendra" required>
+                </div>
+                <div class="form-group">
+                  <label for="whatsappNumber">Nomor WhatsApp Aktif <span class="required">*</span></label>
+                  <input type="tel" id="whatsappNumber" name="whatsappNumber" placeholder="Contoh: 081234567890" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="programInterest">Peminatan Program <span class="required">*</span></label>
+                  <select id="programInterest" name="programInterest" required>
+                    <option value="" disabled selected>-- Pilih Program Belajar --</option>
+                    <option value="Little Coder (Scratch & Game Visual 6-8 Thn)">Little Coder (Scratch Visual, 6-8 Thn)</option>
+                    <option value="Junior Dev (Python & Web App 9-13 Thn)">Junior Dev (Python & Web, 9-13 Thn)</option>
+                    <option value="Robotics & Hardware Explorer (10-18 Thn)">Robotics & Hardware Explorer (10-18 Thn)</option>
+                    <option value="IoT & Smart Device Inventor (11-18 Thn)">IoT & Smart Device Inventor (11-18 Thn)</option>
+                    <option value="Belum Yakin (Minta Rekomendasi Mentor)">Belum Yakin (Minta Rekomendasi Mentor)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="classMode">Metode Kelas Diinginkan <span class="required">*</span></label>
+                  <select id="classMode" name="classMode" required>
+                    <option value="Tatap Muka di Studio (Offline)">Tatap Muka di Studio (Offline)</option>
+                    <option value="Kelas Interaktif Online via Zoom">Kelas Interaktif Online via Zoom</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="preferredSchedule">Pilihan Hari / Waktu Free Trial <span class="required">*</span></label>
+                <select id="preferredSchedule" name="preferredSchedule" required>
+                  <option value="Sabtu Pagi (10.00 - 11.30 WIB)">Sabtu Pagi (10.00 - 11.30 WIB)</option>
+                  <option value="Sabtu Siang (13.30 - 15.00 WIB)">Sabtu Siang (13.30 - 15.00 WIB)</option>
+                  <option value="Minggu Pagi (10.00 - 11.30 WIB)">Minggu Pagi (10.00 - 11.30 WIB)</option>
+                  <option value="Weekday Sore (Rabu/Jumat 16.00 WIB)">Weekday Sore (Rabu / Jumat 16.00 WIB)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="notes">Catatan Tambahan (Pengalaman sebelumnya/kebutuhan khusus)</label>
+                <textarea id="notes" name="notes" rows="2" placeholder="Contoh: Belum pernah belajar coding sebelumnya, sangat suka game Roblox dan merakit lego..."></textarea>
+              </div>
+
+              <!-- Tombol Eksekusi Registrasi via WhatsApp -->
+              <button type="submit" class="btn btn-wa-submit full-width">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                </svg>
+                Kirim Pendaftaran via WhatsApp Otomatis
+              </button>
+
+              <div class="or-divider">
+                <span>atau</span>
+              </div>
+
+              <button type="button" id="btnSubmitEmail" class="btn btn-outline full-width">
+                ✉️ Kirim Pendaftaran via Email
+              </button>
+            </form>
+
+            <!-- Feedback Alert Notifikasi Sukses -->
+            <div id="trialAlertSuccess" class="form-feedback alert-success hidden">
+              <div class="feedback-icon">🎉</div>
+              <div>
+                <strong>Pendaftaran Berhasil Dikirim!</strong>
+                <p>Data pendaftaran Anda telah disiapkan. Admin Coding First akan segera mengonfirmasi ketersediaan slot melalui nomor WhatsApp yang Anda masukkan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         10. Testimoni Orang Tua & Siswa
+         ========================================================================== -->
+    <section class="section testimonials-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Ulasan Jujur</span>
+          <h2 class="section-heading">Apa Kata Para Orang Tua?</h2>
+          <p class="section-desc">Kisah transformasi anak-anak kami dari yang awalnya pasif bermain game menjadi kreator game & inovator robotika.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testi-rating">⭐⭐⭐⭐⭐</div>
+            <p class="testi-text">
+              "Dulu anak saya kecanduan main game di iPad berjam-jam. Setelah 3 bulan ikut kelas Coding First, dia malah asyik bikin game tebak kuis dan animasi sendiri di Scratch. Mentornya sangat sabar!"
+            </p>
+            <div class="testi-profile">
+              <div class="profile-avatar">SM</div>
+              <div>
+                <strong>Siti Marwah</strong>
+                <span>Orang Tua Arfa (Usia 8 Tahun)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testi-rating">⭐⭐⭐⭐⭐</div>
+            <p class="testi-text">
+              "Kelas Robotika & IoT-nya keren banget! Anak saya dibekali kit komponen langsung, sekarang kamar tidurnya sudah dipasang alarm sensor ultrasonik hasil rakitannya sendiri. Sangat recommended!"
+            </p>
+            <div class="testi-profile">
+              <div class="profile-avatar">BW</div>
+              <div>
+                <strong>Budi Wicaksono</strong>
+                <span>Orang Tua Danang (Usia 12 Tahun)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testi-rating">⭐⭐⭐⭐⭐</div>
+            <p class="testi-text">
+              "Nilai matematika anak saya di sekolah ikut membaik karena terbiasa berpikir logis dan sistematis lewat kurikulum Python di Coding First. Investasi pendidikan terbaik untuk era digital sekarang."
+            </p>
+            <div class="testi-profile">
+              <div class="profile-avatar">DA</div>
+              <div>
+                <strong>dr. Dian Anggraini</strong>
+                <span>Orang Tua Felicia (Usia 14 Tahun)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         11. FAQ (Frequently Asked Questions)
+         ========================================================================== -->
+    <section id="faq" class="section bg-light faq-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Tanya Jawab</span>
+          <h2 class="section-heading">Pertanyaan yang Sering Diajukan</h2>
+          <p class="section-desc">Jawaban lengkap seputar sistem belajar, kebutuhan perangkat, dan program di Coding First.</p>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Apakah anak harus memiliki dasar matematika atau coding sebelum mendaftar?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Sama sekali tidak! Kurikulum Coding First dirancang ramah bagi pemula total. Kami memulai dari pengenalan visual, logika blok, dan konsep dasar berpikir kritis tanpa mengharuskan anak menguasai rumus matematika rumit.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Perangkat apa saja yang perlu disiapkan oleh orang tua?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Untuk kelas Tatap Muka di studio kami, semua laptop, tablet, dan perangkat robotika/IoT telah disediakan lengkap di laboratorium. Untuk kelas Online, siswa membutuhkan sebuah laptop/PC dengan koneksi internet stabil dan browser Chrome.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Apakah komponen robotika dan kit IoT menjadi hak milik anak?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Ya! Untuk siswa pada Paket Innovator Pro dan Private Mastery, starter kit microcontroller, sensor, dan komponen perakitan robot fisik menjadi hak milik siswa untuk dibawa pulang dan terus dieksplorasi di rumah.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Bagaimana jika siswa berhalangan hadir pada salah satu sesi jadwal?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Kami menyediakan fasilitas kelas pengganti (make-up class) atau sesi rekaman modul interaktif sehingga anak tidak akan tertinggal materi pembelajaran.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Apa perbedaan Free Trial dengan kelas reguler?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Free Trial adalah sesi perkenalan 60 menit gratis di mana anak langsung mencoba praktik membuat proyek sederhana dan mentor kami melakukan pemetaan minat & bakat anak, tanpa ada komitmen biaya apapun.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         12. Kontak & Lokasi Studio (Key Deliverable 1 & Form Kontak Cepat)
+         ========================================================================== -->
+    <section id="kontak" class="section contact-section">
+      <div class="container">
+        <div class="contact-layout">
+          <!-- Info Alamat & Operasional -->
+          <div class="contact-details">
+            <span class="section-tag">Hubungi Kami</span>
+            <h2 class="section-heading">Kunjungi Studio Kami atau Konsultasi Online</h2>
+            <p class="contact-lead">
+              Pintu kami selalu terbuka bagi para orang tua dan calon inovator muda. Jangan ragu menghubungi kami untuk berdiskusi seputar kebutuhan putra-putri Anda.
+            </p>
+
+            <div class="contact-list">
+              <div class="c-item">
+                <div class="c-icon">📍</div>
+                <div>
+                  <strong>Alamat Studio Pusat:</strong>
+                  <p>Coding First Tech Campus, Jl. Teknologi Digital No. 88, Jakarta Selatan, 12430</p>
+                </div>
+              </div>
+
+              <div class="c-item">
+                <div class="c-icon">📞</div>
+                <div>
+                  <strong>WhatsApp & Hotline Admin:</strong>
+                  <p><a href="https://wa.me/6281234567890" target="_blank" rel="noopener">+62 812-3456-7890 (Respon Cepat)</a></p>
+                </div>
+              </div>
+
+              <div class="c-item">
+                <div class="c-icon">✉️</div>
+                <div>
+                  <strong>Email Resmi:</strong>
+                  <p><a href="mailto:info@codingfirst.id">info@codingfirst.id</a></p>
+                </div>
+              </div>
+
+              <div class="c-item">
+                <div class="c-icon">⏰</div>
+                <div>
+                  <strong>Jam Operasional:</strong>
+                  <p>Senin – Sabtu: 08.30 – 17.30 WIB<br>Minggu: Khusus Kelas Weekend & Workshop</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tombol Direct WhatsApp Support -->
+            <div class="direct-wa-card">
+              <h4>Perlu Jawaban Cepat?</h4>
+              <p>Konsultan akademik kami siap membantu menjawab pertanyaan paket & jadwal dalam 5 menit.</p>
+              <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Coding%20First,%20saya%20ingin%20bertanya%20mengenai%20jadwal%20dan%20lokasi%20kelas." 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn btn-wa full-width">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                </svg>
+                Chat WhatsApp Sekarang
+              </a>
+            </div>
+          </div>
+
+          <!-- Form Kirim Pesan Cepat -->
+          <div class="contact-card">
+            <h3>Kirim Pesan atau Pertanyaan</h3>
+            <p>Punya pertanyaan spesifik tentang kurikulum atau kerjasama sekolah? Tuliskan pesan Anda di bawah ini:</p>
+
+            <form id="generalContactForm" class="contact-form">
+              <div class="form-group">
+                <label for="contactFullName">Nama Lengkap</label>
+                <input type="text" id="contactFullName" name="contactFullName" placeholder="Nama Anda" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail">Alamat Email</label>
+                <input type="email" id="contactEmail" name="contactEmail" placeholder="nama@email.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contactPhone">Nomor WhatsApp / HP</label>
+                <input type="tel" id="contactPhone" name="contactPhone" placeholder="08xxxxxxxxxx" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage">Pesan atau Pertanyaan</label>
+                <textarea id="contactMessage" name="contactMessage" rows="4" placeholder="Tuliskan pertanyaan Anda mengenai program belajar di sini..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary full-width">Kirim Pesan</button>
+            </form>
+
+            <div id="generalContactSuccess" class="form-feedback alert-success hidden">
+              Pesan Anda berhasil dikirim! Tim kami akan membalas via WhatsApp atau Email dalam 1x24 jam.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       13. Floating Action Button (WhatsApp Fast Access)
+       ========================================================================== -->
+  <div class="floating-wa-container">
+    <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Coding%20First,%20saya%20ingin%20konsultasi%20kelas%20coding/robotika/IoT." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="floating-wa-btn" 
+       aria-label="Konsultasi WhatsApp Cepat">
+      <div class="wa-tooltip">Ada pertanyaan? Chat Kami!</div>
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- ==========================================================================
+       14. Footer Resmi Coding First
+       ========================================================================== -->
   <footer class="footer">
-    <div class="container footer-container">
-      <p>&copy; 2026 MyBrand. Seluruh hak cipta dilindungi.</p>
-      <div class="footer-links">
-        <a href="#beranda">Beranda</a>
-        <a href="#tentang">Tentang</a>
-        <a href="#layanan">Layanan</a>
-        <a href="#harga">Harga</a>
+    <div class="container footer-content">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-mark">
+              <svg width="24" height="24" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="40" height="40" rx="10" fill="#0056FF"/>
+                <path d="M14 15L8 20L14 25" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M26 15L32 20L26 25" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 12L18 28" stroke="#25D366" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="logo-text text-white">
+              <span>Coding</span>First<span class="logo-dot">.</span>
+            </div>
+          </div>
+          <p class="footer-tagline">
+            Mempersiapkan Generasi Inovator Digital Masa Depan Melalui Pembelajaran Coding, Robotika, dan IoT yang Bermakna & Menyenangkan.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram Coding First">📷 Instagram</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube Channel">🎥 YouTube</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">💼 LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Program Belajar</h4>
+          <ul>
+            <li><a href="#kurikulum">Little Coder (Usia 6-8)</a></li>
+            <li><a href="#kurikulum">Junior Developer (Usia 9-13)</a></li>
+            <li><a href="#kurikulum">Robotics Hardware (Usia 10-18)</a></li>
+            <li><a href="#kurikulum">Smart Device IoT (Usia 11-18)</a></li>
+            <li><a href="#trial">Free Trial Gratis</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Profil & Informasi</h4>
+          <ul>
+            <li><a href="#profil">Tentang Coding First</a></li>
+            <li><a href="#profil">Visi & Misi Kami</a></li>
+            <li><a href="#harga">Daftar Paket Biaya</a></li>
+            <li><a href="#galeri">Galeri Kegiatan Siswa</a></li>
+            <li><a href="#faq">Frequently Asked Questions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Studio & Layanan</h4>
+          <p class="footer-contact-info">
+            <strong>Headquarters:</strong><br>
+            Jl. Teknologi Digital No. 88, Cilandak, Jakarta Selatan<br>
+            <strong>WhatsApp Hotline:</strong> +62 812-3456-7890<br>
+            <strong>Email:</strong> info@codingfirst.id
+          </p>
+          <a href="#trial" class="btn btn-primary btn-sm footer-btn">Daftar Free Trial &rarr;</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Coding First Academy. Seluruh Hak Cipta Dilindungi Undang-Undang.</p>
+        <div class="footer-legal">
+          <a href="#">Kebijakan Privasi</a>
+          <span>•</span>
+          <a href="#">Syarat & Ketentuan</a>
+          <span>•</span>
+          <a href="#kontak">Hubungi Tim</a>
+        </div>
       </div>
     </div>
   </footer>
 
+  <!-- Script JS Interaktif -->
   <script src="script.js"></script>
 </body>
 </html>
